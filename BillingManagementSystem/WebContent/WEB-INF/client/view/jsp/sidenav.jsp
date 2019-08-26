@@ -56,7 +56,7 @@
                   </a>
                 </li>
             </ul> 
-              <h6 style="padding-top: 165%"><i class="fas fa-copyright"></i> Copyright 2019-2020</h6>
+              <h6 style="padding-top: 315px"><i class="fas fa-copyright"></i> Copyright 2019-2020</h6>
             <br>
             
         </nav>

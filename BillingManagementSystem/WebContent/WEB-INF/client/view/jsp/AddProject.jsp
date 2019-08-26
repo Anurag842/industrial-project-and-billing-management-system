@@ -26,7 +26,6 @@
 				<f:input path="PER_HOUR_BILLING"/><br>
 				<input type="submit" value="Submit">
 			</f:form>
-		   
 		   </div>
         </div>
     </div>

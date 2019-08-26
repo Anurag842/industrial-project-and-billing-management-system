@@ -52,6 +52,7 @@ public class DataEntryController {
 		map.addAttribute("projCon", projCon);
 		DataEntryOperator dataObj=new DataEntryOperator();
 		map.addAttribute("dataObj", dataObj);
+		System.out.println("\n\n\n\nIm in marks\n\n\n\n");
 		return "MarkAttendance";
 	}
 	
@@ -61,7 +62,7 @@ public class DataEntryController {
 		Developer d =dataObj.getDevObj();
 		//ProjectAllocation con = developerDao.getConfigObj(d.getDeveloperId());
 		// System.out.println("------" +con.getPcObj()+"---------");
-		
+		System.out.println("\n\n\n\nIm in attendence\n\n\n\n");
 		boolean saved=developerDao.setAttendance(dataObj);
 		if(saved) {
 			return "DataEntry";

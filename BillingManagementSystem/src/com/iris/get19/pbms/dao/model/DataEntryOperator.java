@@ -16,38 +16,38 @@ public class DataEntryOperator {
 	@Id
 	@GeneratedValue
 	@Column(name="id")
-	private int dataEntryOperatorId;
+	private Integer dataEntryOperatorId;
 	
 	@Column(name="month")
 	private String month;
 	
 	@Column(name="year")
-	private int year;
+	private Integer year;
 
 	@Column(name="fullday")
-	private int fullDay;
+	private Integer fullDay;
 	
 	@Column(name="halfday")
-	private int halfDay;
+	private Integer halfDay;
 	
 	@OneToOne
 	@JoinColumn(name="devid")
 	 Developer devObj;
 	
 	
-	public int getYear() {
+	public Integer getYear() {
 		return year;
 	}
 
-	public void setYear(int year) {
+	public void setYear(Integer year) {
 		this.year = year;
 	}
 
-	public int getdataEntryOperatorId() {
+	public Integer getdataEntryOperatorId() {
 		return dataEntryOperatorId;
 	}
 
-	public void setdataEntryOperatorId(int dataEntryOperatorId) {
+	public void setdataEntryOperatorId(Integer dataEntryOperatorId) {
 		this.dataEntryOperatorId = dataEntryOperatorId;
 	}
 
@@ -59,19 +59,19 @@ public class DataEntryOperator {
 		this.month = month;
 	}
 
-	public int getfullDay() {
+	public Integer getfullDay() {
 		return fullDay;
 	}
 
-	public void setfullDay(int fullDay) {
+	public void setfullDay(Integer fullDay) {
 		this.fullDay = fullDay;
 	}
 
-	public int gethalfDay() {
+	public Integer gethalfDay() {
 		return halfDay;
 	}
 
-	public void sethalfDay(int halfDay) {
+	public void sethalfDay(Integer halfDay) {
 		this.halfDay = halfDay;
 	}
 
@@ -83,9 +83,4 @@ public class DataEntryOperator {
 		this.devObj = devObj;
 	}
 
-
-
-	
-	
-	
 }

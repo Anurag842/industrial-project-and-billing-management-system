@@ -13,6 +13,6 @@
             });
         });
     </script>
-<h6>Copyright 2019-2020</h6>
+
 </body>
 </html>

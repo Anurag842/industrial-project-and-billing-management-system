@@ -117,7 +117,7 @@ public class DeveloperDaoImpl implements DeveloperDao {
 	
 
 	@Override
-	public DataEntryOperator getBill(int id, String month) {
+	public DataEntryOperator getBill(Integer id, String month) {
 		try {
 			Session session=sessionFactory.getCurrentSession();
 			Query q=session.createQuery("from DataEntryOperator where devObj.developerId=:i and month=:m");

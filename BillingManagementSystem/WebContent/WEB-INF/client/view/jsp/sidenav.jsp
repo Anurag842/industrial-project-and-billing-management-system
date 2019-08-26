@@ -24,7 +24,7 @@
                         <li>
                             <a href="AddProj">
                               <i class="fas fa-plus-circle"></i>
-                              Add Project</a>
+                              Project Configuration</a>
                         </li>
                         <li>
                             <a href="AddDev">

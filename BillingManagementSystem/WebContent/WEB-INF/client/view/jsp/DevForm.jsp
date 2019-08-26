@@ -7,6 +7,13 @@
        	<jsp:include page="sidenav.jsp"/>
         <div id="content">
            <jsp:include page="navbar.jsp"/>   
+           <ol class="breadcrumb">
+      		<li class="breadcrumb-item">
+        	<a href="homePage">Admin</a>
+      		</li>
+      		<li class="breadcrumb-item active">Developer Billing</li>
+    		</ol>
+    		<h2 align="center">Developer Billing</h2><hr>
 		   <div id="blankspace" >
 		<form action="Bill"  method="get">
 		<div>

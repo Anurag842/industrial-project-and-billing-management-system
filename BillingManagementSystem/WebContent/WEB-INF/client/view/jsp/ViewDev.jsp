@@ -7,7 +7,13 @@
        	<jsp:include page="sidenav.jsp"/>
         <div id="content">
            <jsp:include page="navbar.jsp"/>   
-           
+           <ol class="breadcrumb">
+      		<li class="breadcrumb-item">
+        	<a href="homePage">Admin</a>
+      		</li>
+      		<li class="breadcrumb-item active">Developer Allocation</li>
+    		</ol>
+    		<h2 align="center">Developer Allocation</h2><hr>
 		   <div id="blankspace" >
 			<f:form action="submitAllocate" modelAttribute="pObj" method="get">
 				<div>

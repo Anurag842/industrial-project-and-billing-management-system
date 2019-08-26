@@ -111,6 +111,7 @@ public class ProjectDaoImpl implements ProjectDao{
 			Session session=sessionFactory.getCurrentSession();
 			Query q=session.createQuery("from ProjectConfiguration where projectid=:p");
 			q.setParameter("p", id);
+			q.getResultList();
 			return q.list();
 		}
 		catch(Exception e)
@@ -120,6 +121,57 @@ public class ProjectDaoImpl implements ProjectDao{
 		return null;
 		
 	}
+
+
+	@Override
+	public 	ProjectConfiguration getProjectConfig(int id) {
+		try
+		{
+			Session session=sessionFactory.getCurrentSession();
+			ProjectConfiguration p = session.get(ProjectConfiguration.class, id);
+			return p;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return null;
 	}
+
+
+	@Override
+	public boolean updateProjectConfig(ProjectConfiguration pObj) {
+		try
+		{
+			Session session=sessionFactory.getCurrentSession();
+			session.update(pObj);
+			return true;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+
+	@Override
+	public boolean deleteProjectConfig(int id) {
+		try
+		{
+			Session session=sessionFactory.getCurrentSession();
+			Query q=session.createQuery("delete from ProjectConfiguration where configid=:p");
+			q.setParameter("p", id);
+			q.getResultList();
+			return true;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return false;
+		
+	}
+}
 
 

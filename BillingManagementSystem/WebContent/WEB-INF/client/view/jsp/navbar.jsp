@@ -17,10 +17,10 @@
                  <li class="nav-item active">
                      <a class="nav-link" href="#">
                        <i class="fas fa-user"></i>
-                       Username</a>
+                       ${userObj.developerName }</a>
                  </li>
                  <li class="nav-item">
-                     <a class="nav-link" href="#">
+                     <a class="nav-link" href="logout">
                        <i class="fas fa-sign-out-alt"></i>
                        Logout</a>
                  </li>

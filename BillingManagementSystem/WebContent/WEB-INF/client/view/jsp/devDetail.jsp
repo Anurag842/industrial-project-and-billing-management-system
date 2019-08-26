@@ -10,7 +10,7 @@
 </head>
 <body>
 	<f:form action="" modelAttribute="de" method="get">
-	<h1>${de}</h1>
+	<h1>Developer ${de} name ${name} for month ${mo} Salary is:</h1>
 		 <h1>${bill}</h1>
 		
 		

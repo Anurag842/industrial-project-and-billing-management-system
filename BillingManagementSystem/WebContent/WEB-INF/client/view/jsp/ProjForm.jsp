@@ -7,9 +7,14 @@
        	<jsp:include page="sidenav.jsp"/>
         <div id="content">
            <jsp:include page="navbar.jsp"/>   
-           
+           <ol class="breadcrumb">
+      		<li class="breadcrumb-item">
+        	<a href="homePage">Admin</a>
+      		</li>
+      		<li class="breadcrumb-item active">Project Billing</li>
+    		</ol>
 		   <div id="blankspace" >
-		
+			<h2 align="center">Project Billing</h2><hr>
 		<form action="BillProj"  method="get">
 		<label>Projects:</label>
 		<div>
@@ -21,7 +26,6 @@
 		</div>
 		<label>Month :</label>
 		<input type="text" name="month" size="30" class="form-control" placeholder="Select Month" /><br>
-		
 		<div class="form-group">
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</div>

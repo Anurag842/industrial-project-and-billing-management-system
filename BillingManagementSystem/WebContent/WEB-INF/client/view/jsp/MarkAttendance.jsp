@@ -2,61 +2,79 @@
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-</head>
-<body>
-	<div align="center">
-	<h1>welcome Data entry operator</h1>
+<jsp:include page="header2.jsp"/>
+    <div class="wrapper">
+       	<jsp:include page="sidenav2.jsp"/>
+        <div id="content">
+        <jsp:include page="navbar2.jsp"/>    
+	<div>
+	<h3>Mark Attendence</h3>
 	<hr>
-		<f:form action="submitData" modelAttribute="dataObj" method="get">
-			<label>Developer Name :</label>
-			<f:select path="devObj.developerId">
-		 	 <core:forEach items="${devObj}" var="dOb">
-				<f:option value="${dOb.developerId}">${dOb.developerName}</f:option>
-			 </core:forEach>
+	<f:form action="submitData" modelAttribute="dataObj" method="get">
+		<div>
+		<label>Developer Name :</label>
+		<f:select path="devObj.developerId" cssClass="form-control">
+ 	 		<core:forEach items="${devObj}" var="dOb">
+ 	 			<f:option value="${dOb.developerId}">${dOb.developerName}</f:option>
+	 		</core:forEach>
 		</f:select><br>
+		</div>
+		
+		<div>
 		<label>Month :</label>
-			<f:select path="month">
-				<f:option value="january">january</f:option>
-				<f:option value="february">february</f:option>
-				<f:option value="march">march</f:option>
-				<f:option value="april">april</f:option>
-				<f:option value="may">may</f:option>
-				<f:option value="june">june</f:option>
-				<f:option value="july">july</f:option>
-				<f:option value="august">august</f:option>
-				<f:option value="september">september</f:option>
-				<f:option value="october">october</f:option>
-				<f:option value="november">november</f:option>
-				<f:option value="december">december</f:option>
-			</f:select>
-			<br>
-			<label>year :</label>
-			<f:select path="year" id="year">
-				<f:option value="">Select year</f:option>
-			</f:select>
-			<script type="text/javascript">
-				for(y=2015;y<2029;y++)
-				{
-					var optn = document.createElement("OPTION");
-					optn.text=y;
-					optn.value=y;
-					
-					if(y==2019)
-					{
-						optn.selected=true;
-					}
-					document.getElementById('year').options.add(optn);
+		<f:select path="month" cssClass="form-control">
+			<f:option value="january">January</f:option>
+			<f:option value="february">February</f:option>
+			<f:option value="march">March</f:option>
+			<f:option value="april">April</f:option>
+			<f:option value="may">May</f:option>
+			<f:option value="june">June</f:option>
+			<f:option value="july">July</f:option>
+			<f:option value="august">August</f:option>
+			<f:option value="september">September</f:option>
+			<f:option value="october">October</f:option>
+			<f:option value="november">November</f:option>
+			<f:option value="december">December</f:option>
+		</f:select>
+		<br>
+		</div>
+		
+		<div>
+		<label>Year :</label>
+		<f:select path="year" id="year" cssClass="form-control">
+			<f:option value="">Select year</f:option>
+		</f:select>
+		<script type="text/javascript">
+			for(y=2015;y<2029;y++){
+				var optn = document.createElement("OPTION");
+				optn.text=y;
+				optn.value=y;
+				
+				if(y==2019){
+					optn.selected=true;
 				}
-			</script>
-			<label>Half day:</label>
-			<f:input path="halfDay" /><br>
-			<label>Full day:</label>
-			<f:input path="fullDay"/><br>
-			<input type="submit" value="submit">
-		</f:form>
+				document.getElementById('year').options.add(optn);
+			}
+		</script>
+		</div>
+		<br>
+		<div>
+		<label>Half day:</label>
+		<f:input path="halfDay" size="30" cssClass="form-control" placeholder="Enter Number of Half Days" /><br>
+		</div>
+		
+		<div>	
+			<label>Full Day:</label>
+			<f:input path="fullDay" size="30" cssClass="form-control" placeholder="Enter Number of Full Days"/><br>
+		</div>
+		
+		<div class="form-group">
+		    <button type="submit" class="btn btn-primary">Submit</button>
+		 </div>
+	</f:form>
 	</div>
+  	<jsp:include page="footer2.jsp"/>
+   	</div>
+   </div>>
 </body>
-</html>
+</html>	

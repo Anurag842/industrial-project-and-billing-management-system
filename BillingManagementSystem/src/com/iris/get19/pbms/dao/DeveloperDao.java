@@ -21,4 +21,5 @@ public interface DeveloperDao {
 	public List<ProjectAllocation> getAllAllocate();
 	public ProjectAllocation getConfig(int id);
 	public ProjectAllocation getProAllocationObj(int id);
+	public String getDeveloperById(int id);
 }

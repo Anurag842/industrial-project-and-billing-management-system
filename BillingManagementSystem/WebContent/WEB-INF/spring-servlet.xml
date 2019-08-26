@@ -14,6 +14,9 @@
    <context:component-scan base-package = "com.iris.get19.pbms.dao.model" />
    <context:component-scan base-package = "com.iris.get19.pbms.dao" />
    <context:component-scan base-package = "com.iris.get19.pbms.dao.impl" />
+   <context:component-scan base-package = "com.iris.get19.pbms.service" />
+   <context:component-scan base-package = "com.iris.get19.pbms.service.impl" />
+   
    <bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
       <property name = "prefix" value = "/WEB-INF/client/view/jsp/" />
       <property name = "suffix" value = ".jsp" />

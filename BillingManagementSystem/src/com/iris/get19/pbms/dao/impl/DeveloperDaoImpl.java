@@ -204,6 +204,23 @@ public class DeveloperDaoImpl implements DeveloperDao {
 		return null;
 	}
 
+	@Override
+	public String getDeveloperById(int id) {
+		try
+		{
+			Session session = sessionFactory.getCurrentSession();
+			Developer obj = session.get(Developer.class, id);
+			String name = obj.getDeveloperName();
+			System.out.println(name);
+			return name;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 	
 
 	

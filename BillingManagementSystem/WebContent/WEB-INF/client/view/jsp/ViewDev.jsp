@@ -9,24 +9,26 @@
            <jsp:include page="navbar.jsp"/>   
            
 		   <div id="blankspace" >
-	<f:form action="submitAllocate" modelAttribute="pObj" method="get">
-		<f:select path="pcObj.CONFIGURATION_ID">
-		 	 <core:forEach items="${projCon}" var="pOb">
-				<f:option value="${pOb.CONFIGURATION_ID}">${pOb.projectObj.projectName},${pOb.roleObj.roleName},${pOb.LOCATION}</f:option>
-			 </core:forEach>
-			 
-		</f:select><br>
-		
-		<f:select path="dObj.developerId">
-		 	 <core:forEach items="${devl}" var="dOb">
-				<f:option value="${dOb.developerId}">${dOb.developerName}</f:option>
-			 </core:forEach>
-		</f:select><br>
-		
-		
-		<input type="submit" value="Submit">
-	</f:form>
-</div>
+			<f:form action="submitAllocate" modelAttribute="pObj" method="get">
+				<div>
+				<f:select path="pcObj.CONFIGURATION_ID" cssClass="form-control">
+		 			<core:forEach items="${projCon}" var="pOb">
+						<f:option value="${pOb.CONFIGURATION_ID}">${pOb.projectObj.projectName},${pOb.roleObj.roleName},${pOb.LOCATION}</f:option>
+			 		</core:forEach>	 
+				</f:select><br>
+				</div>
+				<div>
+				<f:select path="dObj.developerId" cssClass="form-control">
+		 			 <core:forEach items="${devl}" var="dOb">
+						 <f:option value="${dOb.developerId}">${dOb.developerName}</f:option>
+				 	 </core:forEach>
+				</f:select><br>
+				</div>
+				<div class="form-group">
+				    <button type="submit" class="btn btn-primary">Submit</button>
+				 </div>
+			</f:form>
+		</div>
         </div>
     </div>
     <jsp:include page="footer.jsp"/>

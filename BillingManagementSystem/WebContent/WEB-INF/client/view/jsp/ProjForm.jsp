@@ -9,16 +9,22 @@
            <jsp:include page="navbar.jsp"/>   
            
 		   <div id="blankspace" >
-	<form action="BillProj"  method="get">
-		<select name="projectId">
+		
+		<form action="BillProj"  method="get">
+		<label>Projects:</label>
+		<div>
+		<select name="projectId" class="form-control">
 		 	 <core:forEach items="${pList}" var="pOb">
 				<option value="${pOb.projectId}" >${pOb.projectName}</option>
 			 </core:forEach>
 		</select><br>
+		</div>
 		<label>Month :</label>
-		<input type="text" name="month"/><br>
+		<input type="text" name="month" size="30" class="form-control" placeholder="Select Month" /><br>
 		
-		<input type="submit" value="submit">
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</div>
 	</form>
 	</div>
         </div>

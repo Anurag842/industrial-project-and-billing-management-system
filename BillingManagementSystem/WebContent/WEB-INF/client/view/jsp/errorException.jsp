@@ -4,6 +4,6 @@
         <title>Error occurred</title>
     </head>
     <body>
-        <h1>Error Occurred : ${message}</h1>
+        <h1>Error Occurred : ${msg}</h1>
     </body>
 <html>

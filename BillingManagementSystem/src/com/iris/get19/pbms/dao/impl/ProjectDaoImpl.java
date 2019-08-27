@@ -86,6 +86,23 @@ public class ProjectDaoImpl implements ProjectDao{
 		return null;
 	}
 
+	
+
+	//@Override
+	public List<ProjectConfiguration> getAllProjectConfigNotAllocated() {
+		// TODO Auto-generated method stub
+		try {
+			Session session=sessionFactory.getCurrentSession(); 
+			Query q=session.createQuery("from ProjectConfiguration where CONFIGURATION_ID not in(select pcObj.CONFIGURATION_ID from ProjectAllocation)");
+			return q.list();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 
 	@Override
 	public boolean setProjectAllocate(ProjectAllocation obj) {
@@ -159,10 +176,12 @@ public class ProjectDaoImpl implements ProjectDao{
 	public boolean deleteProjectConfig(int id) {
 		try
 		{
+			
+			System.out.println("Configuration Id in controller : "+id);
 			Session session=sessionFactory.getCurrentSession();
 			Query q=session.createQuery("delete from ProjectConfiguration where configid=:p");
 			q.setParameter("p", id);
-			q.getResultList();
+			q.executeUpdate();
 			return true;
 		}
 		catch(Exception e)

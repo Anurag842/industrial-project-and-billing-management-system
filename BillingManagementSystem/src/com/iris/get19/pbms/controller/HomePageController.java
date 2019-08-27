@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomePageController {
+	
 	@Autowired
 	HttpSession session;
 	
@@ -27,7 +28,7 @@ public class HomePageController {
 	public String logout() {
 		session.removeAttribute("userObj");
 		session.invalidate();
-		return "logout";
+		return "index";
 	}
 	
 	@RequestMapping(value= {"contact"}, method=RequestMethod.GET)

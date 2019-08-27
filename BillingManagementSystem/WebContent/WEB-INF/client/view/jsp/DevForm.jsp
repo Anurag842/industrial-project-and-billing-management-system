@@ -24,9 +24,28 @@
 			 </core:forEach>
 		</select><br>
 		</div>
+		
+		<div  >
+			<label>Month :</label> <br>
+			<select   Class="form-control">
+				<option value="january">January</option>
+				<option value="february">February</option>
+				<option value="march">March</option>
+				<option value="april">April</option>
+				<option value="may">May</option>
+				<option value="june">June</option>
+				<option value="july">July</option>
+				<option value="august">August</option>
+				<option value="september">September</option>
+				<option value="october">October</option>
+				<option value="november">November</option>
+				<option value="december">December</option>
+			</select><br>
+		</div>
+		
 		<div>
-		<label>Month :</label>
-		<input type="text" name="month" size="30" class="form-control" placeholder="Select Month" /><br>
+		<label>Year :</label>
+		<input type="text" name="year" size="30" class="form-control" placeholder="Select Year" required/><br>
 		</div>
 		
 		<div class="form-group">

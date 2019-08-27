@@ -44,19 +44,20 @@
                     </ul>
                 </li>
                 <li>
-                  <a href="#">
-                      <i class="fas fa-briefcase"></i>
-                      About
-                  </a>
-                   
-                <li>
-                  <a href="#">
-                      <i class="fas fa-paper-plane"></i>
-                      Contact
-                  </a>
-                </li>
-            </ul> 
-              <h6 style="padding-top: 315px"><i class="fas fa-copyright"></i> Copyright 2019-2020</h6>
-            <br>
+                  
+                     
+                     <a class="nav-link" href="about">
+                     	 <i class="fas fa-briefcase"></i>
+                      	 About
+                     </a>
+                   </li>
+                <li class="nav-item">
+           			 <a class="nav-link" href="contact">
+           			 	<i class="fas fa-paper-plane"></i>
+           			 	Contact
+           			 </a>
+         	   </li>
+              <h6 style="padding-bottom: 15px"><i class="fas fa-copyright"></i> Copyright 2019-2020</h6>
+              <br>
             
         </nav>

@@ -13,10 +13,16 @@
       		</li>
       		<li class="breadcrumb-item active">Developer Allocation</li>
     		</ol>
+    		<core:if test="${param.msg ne null}">
+	    		<div class="alert alert-success">
+	    			${param.msg}
+	    		</div>
+    		</core:if>
     		<h2 align="center">Developer Allocation</h2><hr>
 		   <div id="blankspace" >
 			<f:form action="submitAllocate" modelAttribute="pObj" method="get">
 				<div>
+				<label>Project Configuration:</label>
 				<f:select path="pcObj.CONFIGURATION_ID" cssClass="form-control">
 		 			<core:forEach items="${projCon}" var="pOb">
 						<f:option value="${pOb.CONFIGURATION_ID}">${pOb.projectObj.projectName},${pOb.roleObj.roleName},${pOb.LOCATION}</f:option>
@@ -24,6 +30,7 @@
 				</f:select><br>
 				</div>
 				<div>
+				<label>Developer Name:</label>
 				<f:select path="dObj.developerId" cssClass="form-control">
 		 			 <core:forEach items="${devl}" var="dOb">
 						 <f:option value="${dOb.developerId}">${dOb.developerName}</f:option>

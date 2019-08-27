@@ -17,9 +17,10 @@ public interface DeveloperDao {
 	public Developer getDeveloper(int id,String pass);
 	public boolean setProjectConfig(ProjectAllocation obj);
 	public boolean setAttendance(DataEntryOperator obj);
-	public DataEntryOperator getBill(Integer id,String month);
+	public DataEntryOperator getBill(Integer id,String month,int year);
 	public List<ProjectAllocation> getAllAllocate();
 	public ProjectAllocation getConfig(int id);
 	public ProjectAllocation getProAllocationObj(int id);
 	public String getDeveloperById(int id);
+	public List<Developer> getAllDeveloperNotAllocated();
 }

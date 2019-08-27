@@ -10,9 +10,6 @@
            <jsp:include page="navbar.jsp"/>   
 		   <div align= "center" >
 				<h1>Welcome ${userObj.developerName}</h1><br>
-				<!-- <form action="mark">
-					<button type="submit" class="btn btn-primary">Mark Attendance</button>
-				</form> -->
 			</div>
         </div>
     </div>

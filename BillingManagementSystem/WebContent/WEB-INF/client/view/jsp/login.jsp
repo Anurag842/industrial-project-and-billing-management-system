@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -136,13 +137,13 @@
           <li class="nav-item">
             <a class="nav-link" href="Home">Home</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-link" href="about">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact">Contact</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="login">Login</a>
           </li>
         </ul>
@@ -156,13 +157,20 @@
     <div class="col-md-8 col-lg-6">
       <div class="login d-flex align-items-center py-5">
         <div class="container">
-          <div class="row">
+          <div class="row">	
             <div class="col-md-9 col-lg-8 mx-auto">
               <h3 class="login-heading mb-4">Welcome back!</h3>
+              <core:if test="${msg ne null}">
+              	<div class="alert alert-danger alert-dismissible fade show">
+              		<!-- <strong>Invalid!</strong> Wrong Credentials.
+              		<button type="button" class="close" data-dismiss="alert">&times;</button> -->
+              		${msg}
+              	</div>
+              </core:if>
               <form action="validateRole" method="POST">
                 <div class="form-label-group">
-                  <input type="number" id="inputEmail" class="form-control" placeholder="Email User ID" name="id" required autofocus>
-                  <label for="inputEmail">Email address</label>
+                  <input type="number" id="inputEmail" class="form-control" placeholder="Enter User ID" name="id" required autofocus>
+                  <label for="inputEmail">UserId</label>
                 </div>
 
                 <div class="form-label-group">
@@ -170,13 +178,8 @@
                   <label for="inputPassword">Password</label>
                 </div>
 
-                <div class="custom-control custom-checkbox mb-3">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">Remember password</label>
-                </div>
                 <button class="btn btn-lg btn-dark btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
-                <div class="text-center">
-                  <a class="small" href="#">Forgot password?</a></div>
+               
               </form>
             </div>
           </div>
@@ -187,29 +190,3 @@
 </div>
 </body>
 </html>
-<!--  <body>
-	<div class="sidenav">
-         <div class="login-main-text">
-            <h2>Application<br> Login Page</h2>
-            <p>Login or register from here to access.</p>
-         </div>
-      </div>
-      <div class="main">
-         <div class="col-md-6 col-sm-12">
-            <div class="login-form">
-               <form action="validateRole" method="POST">
-                  <div class="form-group">
-                     <label>User Name</label>
-                     <input type="number" class="form-control" placeholder="User Name" name="id">
-                  </div>
-                  <div class="form-group">
-                     <label>Password</label>
-                     <input type="password" class="form-control" placeholder="Password" name="pwd">
-                  </div>
-                  <button type="submit" class="btn btn-black">Login</button>
-               </form>
-            </div>
-         </div>
-      </div>
-</body>
-</html>-->

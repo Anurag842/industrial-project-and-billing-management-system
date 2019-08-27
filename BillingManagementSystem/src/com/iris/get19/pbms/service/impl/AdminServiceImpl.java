@@ -54,18 +54,19 @@ public class AdminServiceImpl implements AdminService {
 	public List<Developer> getAllDeveloper() {
 		return developerDao.getAllDeveloper();
 	}
+	
+	/*List<Developer> getDeveloperByRole(String role){
+		
+	}*/
 
 	@Override
 	public List<Developer> getDeveloper(List<Developer> dev) {
 		List<Developer> devL = new ArrayList<Developer>();
 		for(Developer d : dev)
 		{
-			System.out.println("Dev :"+d);
 			if(d.getRole().equals("Developer")) {
 				
 				devL.add(d);
-
-				System.out.println("indside for"+devL.size());
 			}
 		}
 		return devL;
@@ -94,8 +95,8 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public DataEntryOperator getBill(int developerId, String month) {
-		return developerDao.getBill(developerId, month);
+	public DataEntryOperator getBill(int developerId, String month,int year) {
+		return developerDao.getBill(developerId, month,year);
 	}
 
 	@Override
@@ -126,8 +127,17 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public boolean updateProjectConfig(ProjectConfiguration pObj) {
-		boolean save = projectDao.updateProjectConfig(pObj);
-		return save;
+		return projectDao.updateProjectConfig(pObj);
+	}
+
+	@Override
+	public List<ProjectConfiguration> getAllProjectConfigNotAllocated() {
+		return projectDao.getAllProjectConfigNotAllocated();
+	}
+
+	@Override
+	public List<Developer> getAllDeveloperNotAllocated() {
+		return developerDao.getAllDeveloperNotAllocated();
 	}
 
 	

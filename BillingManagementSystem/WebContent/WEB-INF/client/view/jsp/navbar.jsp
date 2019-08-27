@@ -1,13 +1,13 @@
-
+<%@page isELIgnored="false" %>
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
      <div class="container-fluid">
 
          <button type="button" id="sidebarCollapse" class="navbar-btn">
-             <span></span>
-             <span></span>
-             <span></span>
+         <span></span>
+         <span></span>
+         <span></span>
          </button>
-         <h3 style="padding: 20px 50px">IRIS Software</h3>
+         <h1 style="padding: 20px 50px">Billing Management System</h1>
          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <i class="fas fa-align-justify"></i>
          </button>
@@ -17,7 +17,7 @@
                  <li class="nav-item active">
                      <a class="nav-link" href="#">
                        <i class="fas fa-user"></i>
-                       ${userObj.developerName }</a>
+                       ${sessionScope.userObj.developerName }</a>
                  </li>
                  <li class="nav-item">
                      <a class="nav-link" href="logout">

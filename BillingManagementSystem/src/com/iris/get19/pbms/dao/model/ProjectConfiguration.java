@@ -8,6 +8,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+
+import org.springframework.beans.factory.annotation.Value;
+
+
+//import com.iris.get19.pbms.dao.customvalid.MinZero;
+
 @Entity
 @Table(name="ProjectConfig")
 public class ProjectConfiguration {
@@ -17,6 +23,7 @@ public class ProjectConfiguration {
 	private int CONFIGURATION_ID;
 	
 	@Column(name="perHourBilling")
+	@Value("1")
 	private int PER_HOUR_BILLING;
 	
 	@Column(name="location")

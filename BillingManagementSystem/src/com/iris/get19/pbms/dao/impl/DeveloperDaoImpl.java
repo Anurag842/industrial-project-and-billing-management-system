@@ -117,12 +117,13 @@ public class DeveloperDaoImpl implements DeveloperDao {
 	
 
 	@Override
-	public DataEntryOperator getBill(Integer id, String month) {
+	public DataEntryOperator getBill(Integer id, String month,int year) {
 		try {
 			Session session=sessionFactory.getCurrentSession();
-			Query q=session.createQuery("from DataEntryOperator where devObj.developerId=:i and month=:m");
+			Query q=session.createQuery("from DataEntryOperator where devObj.developerId=:i and month=:m and year=:y");
 			q.setParameter("i",id);
 			q.setParameter("m",month);
+			q.setParameter("y",year);
 			
 			List<DataEntryOperator> deoList=q.getResultList();
 			if(deoList.size()!=0) {
@@ -213,6 +214,21 @@ public class DeveloperDaoImpl implements DeveloperDao {
 			String name = obj.getDeveloperName();
 			System.out.println(name);
 			return name;
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public List<Developer> getAllDeveloperNotAllocated() {
+		try {
+			Session session=sessionFactory.getCurrentSession(); 
+			Query q=session.createQuery("from Developer where developerId not in(select dObj.developerId from ProjectAllocation) and role=:x ");
+			q.setParameter("x","Developer");
+			return q.list();
 		}
 		catch(Exception e)
 		{

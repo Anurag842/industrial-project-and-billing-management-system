@@ -6,9 +6,22 @@
     <div class="wrapper">
        	<jsp:include page="sidenav2.jsp"/>
         <div id="content">
-        <jsp:include page="navbar2.jsp"/>    
+        <jsp:include page="navbar2.jsp"/>
+        <ol class="breadcrumb">
+    		<li class="breadcrumb-item">
+       			<a href="http://localhost:9696/BillingSystem/dataHome">Data Operator</a>
+    		</li>
+    		<li class="breadcrumb-item active">
+    			Mark Attendance
+    		</li>
+  	   </ol>
+  	   		<core:if test="${param.msg ne null}">
+	    		<div class="alert alert-success">
+	    			${param.msg}
+	    		</div>
+    		</core:if>	    
 	<div>
-	<h3>Mark Attendence</h3>
+	<h3>Mark Attendance</h3>
 	<hr>
 	<f:form action="submitData" modelAttribute="dataObj" method="get">
 		<div>

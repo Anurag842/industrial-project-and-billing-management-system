@@ -14,6 +14,7 @@ public interface ProjectDao {
 		public ProjectConfiguration getProjectConfig(int id);
 		public boolean setProjectAllocate(ProjectAllocation pObj);
 		public List<ProjectConfiguration> getAllProjectConfig();
+		public List<ProjectConfiguration> getAllProjectConfigNotAllocated();
 		public List<ProjectConfiguration> getAllConfigId(int id);
 		public boolean updateProjectConfig(ProjectConfiguration pObj);
 		public boolean deleteProjectConfig(int id);

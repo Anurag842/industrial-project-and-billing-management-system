@@ -13,16 +13,18 @@ public interface AdminService {
 	List<Project> getAllProject();
 	List<Role> getAllRole();
 	List<ProjectConfiguration> getAllProjectConfig();
+	List<ProjectConfiguration> getAllProjectConfigNotAllocated();
 	List<Developer> getAllDeveloper();
 	List<Developer> getDeveloper(List<Developer> dev);
 	boolean setProjectConfig(ProjectConfiguration pObj);
 	boolean setProjectAllocate(ProjectAllocation pObj);
 	List<ProjectAllocation> getAllAllocate();
 	ProjectAllocation getConfig(int developerId);
-	DataEntryOperator getBill(int developerId, String month);
+	DataEntryOperator getBill(int developerId, String month,int year);
 	double getBill(double perHourBilling, DataEntryOperator deo);
 	List<ProjectConfiguration> getAllConfigId(int id);
 	Project getProjectById(int id);
 	String getProjectName(int id);
 	boolean updateProjectConfig(ProjectConfiguration pObj);
+	List<Developer> getAllDeveloperNotAllocated();
 }

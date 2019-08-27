@@ -1,4 +1,4 @@
-
+<%@page isELIgnored="false" %>
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
      <div class="container-fluid">
 
@@ -7,7 +7,7 @@
              <span></span>
              <span></span>
          </button>
-         <h3 style="padding: 20px 50px">IRIS Software</h3>
+         <h3 style="padding: 20px 50px">Billing Management System</h3>
          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <i class="fas fa-align-justify"></i>
          </button>
